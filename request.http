@@ -1,0 +1,69 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "duong1",
+    "email": "otaku1462@gmail.com",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "duong1",
+    "password": "hihi"
+}
+
+
+### 
+
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM3NmNmMjA3ZDkxYjY3NWEzZDBmZjEiLCJpYXQiOjE2NDg0NDAyMDZ9.4m-oc4N7qILnom2cmQhUUXNXyoRwUM5h2n1d4DIY6D8
+
+{
+    "title": "Seven",
+    "description": "Trời hôm nay nhiều mây cực",
+    "url": "https://www.youtube.com/watch?v=BHCU7CR_Unk&list=RDt-wFKNy0MZQ&index=7",
+    "status": "LEARNING"
+}
+
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM3NmNmMjA3ZDkxYjY3NWEzZDBmZjEiLCJpYXQiOjE2NDg0NDMyODF9.yG6JXcSp789Dk_WPSRiA4OvM-92hHNEv3xnVuUc_A20
+
+###
+
+PUT http://localhost:5000/api/posts/623adbe4e2ccf2175d09924f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM3NmNmMjA3ZDkxYjY3NWEzZDBmZjEiLCJpYXQiOjE2NDg0NDMyODF9.yG6JXcSp789Dk_WPSRiA4OvM-92hHNEv3xnVuUc_A20
+
+{
+    "title": "Update",
+    "description": "Trời hôm nay nhiều mây cực",
+    "url": "random.org",
+    "status": "LEARNING"
+}
+
+
+###
+
+DELETE  http://localhost:5000/api/posts/62394e6d667728f0b4cbb78c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM3NmNmMjA3ZDkxYjY3NWEzZDBmZjEiLCJpYXQiOjE2NDc5MjI2OTd9.RPkjjUVtCR4ZwIHfXhXLwcJoiVduqgY0r98Bj5HNwIY
+
+
+###
+
+POST http://localhost:5000/api/auth/change-password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjM3NmNmMjA3ZDkxYjY3NWEzZDBmZjEiLCJpYXQiOjE2NDc5MjI2OTd9.RPkjjUVtCR4ZwIHfXhXLwcJoiVduqgY0r98Bj5HNwIY
+Content-Type: application/json
+
+{
+    "password": "hihi"
+}
