@@ -158,8 +158,6 @@ router.post("/login", async (req, res) => {
 
 router.post("/change-password", verifyToken, async (req, res) => {
   const { password } = req.body;
-  //   console.log(req.body);
-  //   console.log(password);
   try {
     const passwordHash = await argon2.hash(password);
     await User.findOneAndUpdate(
